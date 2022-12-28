@@ -32,10 +32,16 @@ RUN apt-get update \
     && echo "deb http://ppa.launchpad.net/ondrej/php/ubuntu focal main" > /etc/apt/sources.list.d/ondrej-ubuntu-php-focal.list \
     && apt-get update \
     && apt-get -y --no-install-recommends install $(cat /tmp/php-packages.txt) \
+    && ln -sf /usr/sbin/php-fpm${PHP_VERSION} /usr/sbin/php-fpm \
+    && mkdir -p /var/www/html/public && echo "<?php phpinfo();" > /var/www/html/public/index.php \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/*
 
 COPY nginx/ /etc/nginx/
 COPY fpm/ /etc/php/${PHP_VERSION}/fpm/
+COPY supervisor/ /etc/supervisor/
+COPY entrypoint.sh /entrypoint
 
 WORKDIR /var/www/html
+
+ENTRYPOINT ["/entrypoint"]
