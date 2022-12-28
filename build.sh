@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 if [ -z "$DOCKER_HOST" ]; then
     echo "DOCKER_HOST must be set"
     exit 1
@@ -21,3 +23,9 @@ for phpVersion in ${phpVersions[@]}; do
       -f "${SCRIPT_DIR}/src/Dockerfile" \
       "${SCRIPT_DIR}/src"
 done
+
+if [[ $# -gt 0 ]] && [[ $1 == "push" ]]; then
+    for phpVersion in ${phpVersions[@]}; do
+        docker push "fideloper/fly-laravel:${phpVersion}"
+    done
+fi
