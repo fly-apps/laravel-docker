@@ -12,6 +12,10 @@ server {
 
     client_max_body_size 2048M;
 
+    location /index.php {
+        try_files /not_exists @octane;
+    }
+
     location / {
         try_files $uri $uri/ @octane;
     }
