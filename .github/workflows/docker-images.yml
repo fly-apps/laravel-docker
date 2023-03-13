@@ -20,3 +20,5 @@ jobs:
     
     - name: Build and Push Images
       run: ./build.sh push
+      env:
+          DOCKER_HOST: localhost
