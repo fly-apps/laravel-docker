@@ -2,10 +2,6 @@
 
 set -e
 
-if [ -z "$DOCKER_HOST" ]; then
-    echo "DOCKER_HOST must be set"
-    exit 1
-fi
 
 SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
