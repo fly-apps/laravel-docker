@@ -6,7 +6,7 @@ This helps run `docker build...` on AMD64 instances, especially useful when you'
 
 A lot of this is based on [this repository](https://github.com/fly-apps/docker-daemon).
 
-## Setting Up the Remove Builder
+## Setting Up the Remote Builder
 
 Creating a builder for use like this can be done using [Fly Machines](https://fly.io/docs/machines/).
 
