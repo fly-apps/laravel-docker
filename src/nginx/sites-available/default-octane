@@ -36,7 +36,6 @@ server {
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection $connection_upgrade;
 
-        proxy_busy_buffers_size 16k;
         proxy_buffers 16 16k;
         proxy_buffer_size  32k;
 
