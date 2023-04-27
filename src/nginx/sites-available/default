@@ -20,6 +20,8 @@ server {
         include snippets/fastcgi-php.conf;
         fastcgi_param HTTP_X_FORWARDED_FOR $http_fly_client_ip;
         fastcgi_pass unix:/var/run/php/php-fpm.sock;
+        fastcgi_buffers  16 16k;
+        fastcgi_buffer_size  32k;
     }
 
     location = /favicon.ico {
