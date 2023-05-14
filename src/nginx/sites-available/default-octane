@@ -57,7 +57,7 @@ server {
         access_log off;
         log_not_found off;
         # Pass to PHP to ensure PHP apps can handle routes that end in these filetypes
-        try_files $uri /index.php?$query_string;
+        try_files $uri @octane;
     }
 
     location ~* \.(?:svgz?|ttf|ttc|otf|eot|woff2?)$ {
