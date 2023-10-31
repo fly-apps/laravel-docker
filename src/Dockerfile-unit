@@ -23,7 +23,7 @@ RUN curl -O https://unit.nginx.org/download/unit-${UNIT_VERSION}.tar.gz \
         --tests --modules=/usr/lib/unit/modules --libdir=/usr/lib/x86_64-linux-gnu \
     && ./configure php --module=php --config=php-config${PHP_VERSION} \
     && make php \
-    && make install php-install
+    && make install php
 
 
 FROM ubuntu:22.04
