@@ -1,7 +1,7 @@
 FROM ubuntu:22.04 as unit-builder
 
 ARG PHP_VERSION='8.2'
-ARG UNIT_VERSION='1.31.0'
+ARG UNIT_VERSION='1.31.1'
 
 ENV DEBIAN_FRONTEND=noninteractive
 
