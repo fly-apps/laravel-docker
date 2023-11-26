@@ -10,6 +10,7 @@ This creates a base container for the following PHP versions
 * 8.0
 * 8.1
 * 8.2
+* 8.3
 
 Built containers from this project will be available at https://hub.docker.com/r/fideloper/fly-laravel
 
