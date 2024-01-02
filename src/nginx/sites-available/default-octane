@@ -12,6 +12,8 @@ server {
 
     client_max_body_size 2048M;
 
+    access_log /dev/stdout fly;
+
     location /index.php {
         try_files /not_exists @octane;
     }

@@ -12,6 +12,8 @@ server {
 
     client_max_body_size 2048M;
 
+    access_log /dev/stdout fly;
+
     location / {
         try_files $uri $uri/ /index.php?$query_string;
     }
