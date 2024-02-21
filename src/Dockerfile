@@ -41,6 +41,7 @@ COPY nginx/ /etc/nginx/
 COPY fpm/ /etc/php/${PHP_VERSION}/fpm/
 COPY supervisor/ /etc/supervisor/
 COPY entrypoint.sh /entrypoint
+COPY start-nginx.sh /usr/local/bin/start-nginx
 
 WORKDIR /var/www/html
 
