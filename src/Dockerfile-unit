@@ -46,7 +46,8 @@ ENV DEBIAN_FRONTEND=noninteractive \
     PHP_MEMORY_LIMIT=256M \
     PHP_MAX_EXECUTION_TIME=90 \
     PHP_POST_MAX_SIZE=100M \
-    PHP_UPLOAD_MAX_FILE_SIZE=100M
+    PHP_UPLOAD_MAX_FILE_SIZE=100M \ 
+    PHP_ALLOW_URL_FOPEN=1
 
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 COPY php/ondrej_ubuntu_php.gpg /etc/apt/trusted.gpg.d/ondrej_ubuntu_php.gpg
