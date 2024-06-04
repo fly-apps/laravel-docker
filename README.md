@@ -45,3 +45,4 @@ The following environment variables can be set at run-time or when extending thi
 | PHP_MAX_EXECUTION_TIME | php setting max_execution_time       | 90            |
 | PHP_POST_MAX_SIZE | php setting post_max_size            | 100M          |
 | PHP_UPLOAD_MAX_FILE_SIZE | php setting upload_max_file_size     | 100M          |
+| PHP_ALLOW_URL_FOPEN | php setting allow_url_fopen     | Off          |
