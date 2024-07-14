@@ -1,7 +1,7 @@
 name: Build Base Images
 on:
   schedule:
-    - cron: "0 */72 * * *"
+    - cron: "0 0 * * 5"
   workflow_dispatch:
 
 jobs:
