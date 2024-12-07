@@ -1,0 +1,23 @@
+name: Test PR
+
+on:
+  pull_request:
+    branches:
+      - '**'
+    types:
+      - opened
+      - synchronize
+      - reopened
+  workflow_dispatch:
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Build and Push Images
+      run: ./build.sh
